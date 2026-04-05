@@ -1,0 +1,517 @@
+/* ClientDashboard.css */
+
+/* Main Layout */
+.dashboard {
+    min-height: 100vh;
+    background: #49AFAF;
+    background: radial-gradient(at center, #49AFAF, #A8DFF4);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    background: #49AFAF;
+    background: radial-gradient(at center, #49AFAF, #A8DFF4);
+  }
+  
+  /* Dashboard Header */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .dashboard-nav {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .nav-link {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .nav-link:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .sign-out-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .sign-out-button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Greeting Section */
+  .greeting-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+  
+  .greeting-box {
+    background-color: #3b82f6;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+  }
+  
+  .greeting-text {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* Service Cards Grids */
+  .top-services-grid,
+  .bottom-services-grid {
+    display: grid;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .top-services-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .bottom-services-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  @media (min-width: 768px) {
+    .top-services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .bottom-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Service Cards */
+  .service-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-image-container {
+    height: 192px;
+    background-color: #e5e7eb;
+    position: relative;
+  }
+  
+  .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .service-content {
+    padding: 16px;
+  }
+  
+  .service-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .service-description {
+    color: #4b5563;
+    margin-bottom: 16px;
+  }
+  
+  .service-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .service-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .arrow-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+  }
+  
+  /* Loading State */
+  .loading-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #49AFAF;
+    background: radial-gradient(at center, #49AFAF, #A8DFF4);
+  }
+
+  .loading-content {
+    text-align: center;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3b82f6;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-text {
+    margin-top: 12px;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  /* Error State */
+  .error-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #49AFAF;
+    background: radial-gradient(at center, #49AFAF, #A8DFF4);
+  }
+  
+  .error-content {
+    text-align: center;
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+  
+  .error-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #dc2626;
+    margin-bottom: 12px;
+  }
+  
+  .error-message {
+    margin-bottom: 16px;
+  }
+  
+  .login-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Referral Program Section */
+  .referral-section,
+  .top-riders-section {
+    margin-bottom: 32px;
+  }
+
+  .section-header {
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .section-icon {
+    margin-right: 8px;
+    color: #3b82f6;
+  }
+
+  .section-subtitle {
+    color: #4b5563;
+    margin-bottom: 16px;
+  }
+
+  .referral-container {
+    display: grid;
+    gap: 16px;
+  }
+
+  .referral-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+  }
+
+  .referral-header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .referral-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .referral-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .referral-code {
+    background-color: #f3f4f6;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .copy-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .copy-button:hover {
+    background-color: #2563eb;
+  }
+
+  .copy-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+
+  .referral-instruction {
+    color: #4b5563;
+    margin-bottom: 16px;
+  }
+
+  .share-button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .share-button:hover {
+    background-color: #059669;
+  }
+
+  .share-icon {
+    margin-right: 8px;
+  }
+
+  .referral-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .referral-stats {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 12px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+  }
+
+  .stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    color: #4b5563;
+    font-size: 14px;
+  }
+
+  /* Top Rated Riders Section */
+  .riders-container {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (min-width: 640px) {
+    .riders-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .riders-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .riders-container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .rider-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rider-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #3b82f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .rider-info {
+    width: 100%;
+  }
+
+  .rider-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .rider-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .star-filled {
+    color: #f59e0b;
+  }
+
+  .star-empty {
+    color: #d1d5db;
+  }
+
+  .rating-value {
+    margin-left: 4px;
+    font-weight: 600;
+  }
+
+  .rider-stats {
+    font-size: 12px;
+    color: #4b5563;
+  }
+
+  .rider-stats span {
+    margin: 0 4px;
+  }
+
+  .no-riders-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 32px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .no-riders-icon {
+    font-size: 48px;
+    color: #9ca3af;
+    margin-bottom: 16px;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: white;
+    padding: 16px 0;
+    text-align: center;
+  }

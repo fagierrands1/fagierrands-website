@@ -1,0 +1,140 @@
+/* Global responsive utilities */
+
+/* Fix for iOS input zoom */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+  font-size: 16px !important; /* Prevents iOS zoom on focus */
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Add top margin to account for fixed header */
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* Touch-friendly tap targets */
+button, 
+a, 
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Responsive text utilities */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  p, li, a {
+    font-size: 1rem !important;
+  }
+}
+
+/* Responsive table handling */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Responsive image handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive flex utilities */
+@media (max-width: 768px) {
+  .flex-col-mobile {
+    flex-direction: column !important;
+  }
+  
+  .items-center-mobile {
+    align-items: center !important;
+  }
+  
+  .justify-center-mobile {
+    justify-content: center !important;
+  }
+  
+  .w-full-mobile {
+    width: 100% !important;
+  }
+}
+
+/* Responsive grid utilities */
+@media (max-width: 768px) {
+  .grid-cols-1-mobile {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Responsive visibility utilities */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  
+  .block-mobile {
+    display: block !important;
+  }
+}
+
+/* Responsive padding/margin utilities */
+@media (max-width: 768px) {
+  .p-4-mobile {
+    padding: 1rem !important;
+  }
+  
+  .px-4-mobile {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .py-4-mobile {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  .m-4-mobile {
+    margin: 1rem !important;
+  }
+  
+  .mx-4-mobile {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+  
+  .my-4-mobile {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}

@@ -1,0 +1,271 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto; */
+  text-align: center;
+}
+
+/* OpenLayers Map Styles */
+.ol-viewport {
+  position: relative;
+}
+
+.ol-control {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.ol-control button {
+  display: block;
+  margin: 1px;
+  padding: 0;
+  color: white;
+  font-size: 1.14em;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  height: 1.375em;
+  width: 1.375em;
+  line-height: 0.4em;
+  background-color: rgba(0, 60, 136, 0.5);
+  border: none;
+  border-radius: 2px;
+}
+
+.ol-control button:hover {
+  background-color: rgba(0, 60, 136, 0.7);
+}
+
+.ol-zoom {
+  top: 0.5em;
+  left: 0.5em;
+}
+
+.ol-attribution {
+  bottom: 0.5em;
+  right: 0.5em;
+  max-width: calc(100% - 1.3em);
+}
+
+.ol-attribution ul {
+  margin: 0;
+  padding: 0 0.5em;
+  color: #000;
+  text-shadow: 0 0 2px #fff;
+  font-size: 12px;
+}
+
+.ol-attribution li {
+  display: inline;
+  list-style: none;
+}
+
+.ol-attribution li:not(:last-child):after {
+  content: " ";
+}
+
+.ol-attribution img {
+  max-height: 2em;
+  max-width: inherit;
+  vertical-align: middle;
+}
+
+.ol-scale-line {
+  background: rgba(0, 60, 136, 0.3);
+  border-radius: 4px;
+  bottom: 8px;
+  left: 8px;
+  padding: 2px;
+  position: absolute;
+}
+
+.ol-scale-line-inner {
+  border: 1px solid #eee;
+  border-top: none;
+  color: #eee;
+  font-size: 10px;
+  text-align: center;
+  margin: 1px;
+  will-change: contents, width;
+}
+
+/* Custom map controls */
+.map-control-button {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.map-control-button:hover {
+  background: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Mapbox GL Styles */
+.mapboxgl-map {
+  font-family: inherit;
+}
+
+.mapboxgl-popup {
+  max-width: 300px;
+}
+
+.mapboxgl-popup-content {
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 18px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.mapboxgl-ctrl-group {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapboxgl-ctrl button {
+  border-radius: 0;
+}
+
+.mapboxgl-ctrl-group > button:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.mapboxgl-ctrl-group > button:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Attribution styling */
+.mapboxgl-ctrl-attrib {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+/* Scale control styling */
+.mapboxgl-ctrl-scale {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Animation classes for login/signup pages */
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-in.opacity-100 {
+  opacity: 1;
+}
+
+.animate-in.translate-y-0 {
+  transform: translateY(0);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #3f51b5, #49AFAF);
+}
+
+.landing-bg {
+  background-image: url('../src/assets/fagi2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.autocomplete-container {
+  padding: 6px;
+}
+
+.custom-placeholder::placeholder {
+  color: #0a1013;
+  /* your custom color */
+  font-weight: bold;
+}
+
+.container {
+  min-height: 100vh; /* same as min-h-screen */
+  display: flex;     /* flex */
+  flex-direction: column; /* flex-col */
+  background: linear-gradient(to bottom right, #bbf7d0, #dbeafe, #93c5fd); /* similar gradient */
+}
+
+/* Improved form input focus styles */
+input:focus, 
+textarea:focus, 
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+  border-color: #3f51b5 !important;
+}
+
+/* Button hover effects */
+.btn-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Add this to your CSS file */
+.map-container {
+  position: relative;
+  z-index: 1;
+}
+
+.flex.mt-4.text-blue-500.flex-row.justify-center.gap-6 {
+  position: relative;
+  z-index: 2;
+  margin-top: 1rem;
+}
+

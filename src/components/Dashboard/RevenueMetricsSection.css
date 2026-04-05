@@ -1,0 +1,109 @@
+.revenue-metrics-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.section-header {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 15px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 5px 0;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.revenue-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.revenue-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.charts-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.chart-container {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9;
+}
+
+.chart-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(241, 245, 249, 0.5);
+  padding-bottom: 10px;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 5px 0;
+}
+
+.chart-subtitle {
+  font-size: 12px;
+  color: #718096;
+  margin: 0;
+}
+
+.revenue-trend {
+  min-height: 200px;
+}
+
+.revenue-breakdown {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .revenue-metrics-section {
+    padding: 20px;
+  }
+  
+  .revenue-cards-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
+  
+  .chart-container {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,78 @@
+/* Basic styling for legal pages (Privacy Policy, Terms, etc.) */
+.legal-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 40px 16px;
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  padding: 32px;
+}
+
+.legal-header {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.legal-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  color: #111827;
+}
+
+.last-updated {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.legal-content {
+  color: #1f2937;
+}
+
+.legal-section {
+  margin: 20px 0;
+}
+
+.legal-section h2 {
+  font-size: 20px;
+  margin: 16px 0 8px 0;
+  color: #111827;
+}
+
+.legal-section p {
+  line-height: 1.7;
+  margin: 8px 0;
+}
+
+.legal-section ul {
+  padding-left: 20px;
+}
+
+.contact-info p {
+  margin: 4px 0;
+}
+
+.legal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 28px;
+  padding-top: 16px;
+}
+
+.back-link,
+.related-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.related-link + .related-link {
+  margin-left: 12px;
+}

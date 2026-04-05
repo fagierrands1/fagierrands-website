@@ -1,0 +1,470 @@
+.quote-review-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.header h2 {
+  color: #333;
+  margin: 0;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-controls label {
+  font-weight: 500;
+  color: #555;
+}
+
+.filter-controls select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Quotes Grid */
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 25px;
+}
+
+/* Quote Cards */
+.quote-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quote-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.quote-card.submitted {
+  border-left: 4px solid #007bff;
+}
+
+.quote-card.approved {
+  border-left: 4px solid #28a745;
+}
+
+.quote-card.rejected {
+  border-left: 4px solid #dc3545;
+}
+
+/* Quote Header */
+.quote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.quote-info h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.quote-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-blue {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-green {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-red {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-orange {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-gray {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+/* Card Sections */
+.service-provider-info,
+.order-details,
+.quote-details {
+  margin-bottom: 20px;
+}
+
+.service-provider-info h4,
+.order-details h4,
+.quote-details h4 {
+  margin: 0 0 10px 0;
+  color: #495057;
+  font-size: 16px;
+  border-bottom: 1px solid #f1f3f4;
+  padding-bottom: 5px;
+}
+
+.service-provider-info p,
+.order-details p,
+.quote-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Description and Notes */
+.description,
+.materials,
+.notes {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.description strong,
+.materials strong,
+.notes strong {
+  color: #495057;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.description p,
+.materials p,
+.notes p {
+  margin: 0;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Timestamps */
+.quote-timestamps {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f1f3f4;
+  border-radius: 6px;
+}
+
+.quote-timestamps p {
+  margin: 3px 0;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Rejection Reason */
+.rejection-reason {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.rejection-reason strong {
+  color: #721c24;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.rejection-reason p {
+  margin: 0;
+  color: #721c24;
+}
+
+/* Quote Actions */
+.quote-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.approve-btn,
+.reject-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.approve-btn {
+  background: #28a745;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #1e7e34;
+}
+
+.reject-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #c82333;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.review-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #333;
+  background: #f8f9fa;
+  border-radius: 50%;
+}
+
+/* Modal Content */
+.modal-content {
+  padding: 20px;
+}
+
+.quote-summary {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.quote-summary h4 {
+  margin: 0 0 10px 0;
+  color: #495057;
+}
+
+.quote-summary p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.approval-confirmation {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  padding: 15px;
+  color: #155724;
+}
+
+.approval-confirmation p {
+  margin: 5px 0;
+}
+
+/* Rejection Form */
+.rejection-form {
+  margin-top: 20px;
+}
+
+.rejection-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.rejection-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.rejection-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.help-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #545b62;
+}
+
+.submit-btn.approve {
+  background: #28a745;
+  color: white;
+}
+
+.submit-btn.approve:hover {
+  background: #1e7e34;
+}
+
+.submit-btn.reject {
+  background: #dc3545;
+  color: white;
+}
+
+.submit-btn.reject:hover {
+  background: #c82333;
+}
+
+/* Loading and No Results */
+.loading,
+.no-quotes {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.no-quotes p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quote-review-container {
+    padding: 15px;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .quote-actions {
+    flex-direction: column;
+  }
+  
+  .review-modal {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+}

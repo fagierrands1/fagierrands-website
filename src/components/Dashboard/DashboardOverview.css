@@ -1,0 +1,15 @@
+/* DashboardOverview.css */
+.dashboard-overview-container {
+  background: #49AFAF;
+  background: radial-gradient(at center, #49AFAF, #A8DFF4);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dashboard-card {
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}

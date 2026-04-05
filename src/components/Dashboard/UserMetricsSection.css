@@ -1,0 +1,57 @@
+.user-metrics-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.user-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.user-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.user-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.user-growth {
+  min-height: 180px;
+}
+
+.user-activity {
+  min-height: 180px;
+}
+
+.user-retention {
+  min-height: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .user-charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-metrics-section {
+    padding: 20px;
+  }
+  
+  .user-cards-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,94 @@
+.revenue-pie-chart {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+
+.pie-chart-container {
+  flex-shrink: 0;
+}
+
+.pie-svg {
+  width: 120px;
+  height: 120px;
+}
+
+.pie-segment {
+  transition: stroke-width 0.2s ease;
+  cursor: pointer;
+}
+
+.pie-segment:hover {
+  stroke-width: 12;
+}
+
+.pie-legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.3;
+}
+
+.legend-amount {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .revenue-pie-chart {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .pie-legend {
+    width: 100%;
+  }
+  
+  .legend-row {
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .legend-row:last-child {
+    border-bottom: none;
+  }
+}

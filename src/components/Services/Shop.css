@@ -1,0 +1,455 @@
+/* Shop.css */
+
+/* Main Container */
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: #49AFAF;
+    background: radial-gradient(at center, #49AFAF, #A8DFF4);
+  }
+  
+  /* Main Content Area */
+  .shop-main {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  @media (min-width: 640px) {
+    .shop-main {
+      padding: 32px 40px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .shop-main {
+      padding: 40px 60px;
+    }
+  }
+  
+  /* Header Section */
+  .shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .shop-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .back-button {
+    padding: 8px 16px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .back-button:hover {
+    background-color: #d1d5db;
+  }
+  
+  /* Step Container */
+  .step-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px 32px;
+  }
+
+  @media (min-width: 768px) {
+    .step-container {
+      padding: 48px 40px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .step-container {
+      padding: 56px 48px;
+    }
+  }
+  
+  .step-title {
+    font-weight: 600;
+    margin-bottom: 32px;
+    text-align: left;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 20px;
+    color: #1f2937;
+  }
+  
+  @media (min-width: 768px) {
+    .step-title {
+      text-align: center;
+    }
+  }
+  
+  /* Form Inputs */
+  .select-container, .input-container {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    width: 100%;
+    padding: 0 8px;
+  }
+  
+  @media (min-width: 768px) {
+    .select-container, .input-container {
+      width: 85%;
+      padding: 0 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .select-container, .input-container {
+      width: 80%;
+      padding: 0 24px;
+    }
+  }
+
+  .items-section,
+  .photos-section,
+  .location-section,
+  .contact-section,
+  .price-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #f3f4f6;
+  }
+
+  .items-section:first-of-type,
+  .photos-section:first-of-type,
+  .location-section:first-of-type,
+  .contact-section:first-of-type,
+  .price-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .select-wrapper, .input-wrapper {
+    width: 100%;
+  }
+  
+  .input-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  
+  .select-input, .text-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+  }
+  
+  .textarea-input {
+    outline: none;
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  
+  /* Item Row Styling */
+  .item-row {
+    display: flex;
+    margin: 0 auto 24px auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  @media (min-width: 768px) {
+    .item-row {
+      width: 85%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .item-row {
+      width: 80%;
+    }
+  }
+  
+  .item-fields {
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    padding: 0;
+    gap: 12px;
+  }
+  
+  @media (min-width: 768px) {
+    .item-fields {
+      justify-content: space-between;
+    }
+  }
+  
+  .item-name-field {
+    display: flex;
+    width: 50%;
+    text-align: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .item-quantity-field, .item-price-field {
+    display: flex;
+    text-align: start;
+    width: 22%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  @media (min-width: 768px) {
+    .item-quantity-field, .item-price-field {
+      width: 23%;
+    }
+  }
+  
+  .item-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  /* Description Container */
+  .description-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .description-container {
+      width: 70%;
+    }
+  }
+  
+  /* Price and Navigation */
+  .total-price {
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  
+  .next-button, .prev-next-button {
+    color: #3b82f6;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .next-button:disabled {
+    color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  /* Contact Details Section */
+  .contact-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    margin-top: 24px;
+    padding: 16px 0;
+    justify-content: center;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-section {
+      width: 60%;
+    }
+  }
+  
+  .section-label {
+    text-align: start;
+    padding: 12px 0;
+  }
+  
+  .contact-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .contact-info-box {
+    display: flex;
+    width: 48%;
+    gap: 16px;
+    border-radius: 8px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+  }
+  
+  .contact-input {
+    outline: none;
+    width: 48%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+  }
+  
+  /* Location Section */
+  .location-title {
+    text-align: start;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .location-info {
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .location-subtitle {
+    font-weight: 600;
+  }
+  
+  .location-coordinates {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  /* Final Step / Receipt */
+  .confirmation-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .receipt-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .receipt {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .receipt-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .receipt-section {
+    margin-bottom: 16px;
+  }
+  
+  .receipt-section-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .items-list {
+    border-top: 1px solid #d1d5db;
+    border-bottom: 1px solid #d1d5db;
+  }
+  
+  .item-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+  
+  .receipt-total {
+    text-align: right;
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .receipt-details {
+    font-size: 14px;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+  }
+  
+  /* Final Buttons */
+  .final-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .final-buttons {
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+    flex-direction: row;
+    gap: 32px;
+  }
+  
+  .confirm-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .confirm-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .confirm-button:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+  }
+  
+  /* Error Message */
+  .error-message {
+    text-align: center;
+    margin-top: 16px;
+    color: #ef4444;
+  }

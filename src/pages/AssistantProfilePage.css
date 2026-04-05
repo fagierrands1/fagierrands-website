@@ -1,0 +1,81 @@
+/* AssistantProfilePage.css */
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.in-progress {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-badge.verified {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.rejected {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-badge.unknown {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.status-badge.assistant-type {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.status-badge.rating {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border .75s linear infinite;
+}
+
+@keyframes spinner-border {
+  to { transform: rotate(360deg); }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

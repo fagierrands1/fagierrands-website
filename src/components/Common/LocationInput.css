@@ -1,0 +1,156 @@
+/* src/components/Common/LocationInput.css */
+
+.location-input-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.location-input-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.required-asterisk {
+  color: #ef4444;
+  margin-left: 0.25rem;
+}
+
+.location-input-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.location-text-input-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.location-text-input-container:focus-within {
+  border-color: #49AFAF;
+  box-shadow: 0 0 0 3px rgba(73, 175, 175, 0.1);
+}
+
+.location-input-icon {
+  color: #49AFAF;
+  font-size: 1.125rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.location-text-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #1f2937;
+  background: transparent;
+  font-family: inherit;
+}
+
+.location-text-input::placeholder {
+  color: #9ca3af;
+}
+
+.location-text-input.input-error {
+  border-color: #ef4444;
+}
+
+.location-text-input.input-error:focus-within {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.location-map-button {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: white;
+  color: #49AFAF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.location-map-button:hover {
+  background: #f0f9ff;
+  border-color: #49AFAF;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(73, 175, 175, 0.15);
+}
+
+.location-map-button:active {
+  transform: translateY(0);
+}
+
+.location-map-button svg {
+  font-size: 1.25rem;
+}
+
+.location-input-error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.select-on-map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: transparent;
+  border: none;
+  color: #49AFAF;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.select-on-map-button:hover {
+  background: #f0f9ff;
+  color: #3d8f8f;
+}
+
+.select-on-map-icon {
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .location-input-wrapper {
+    flex-direction: column;
+  }
+
+  .location-map-button {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+

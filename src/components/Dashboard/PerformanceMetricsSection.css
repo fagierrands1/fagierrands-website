@@ -1,0 +1,142 @@
+.performance-metrics-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.performance-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.performance-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.performance-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.performance-trend {
+  min-height: 180px;
+}
+
+.response-time {
+  min-height: 180px;
+}
+
+.performance-indicators {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.indicator-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.indicator-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.indicator-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.indicator-header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.indicator-icon {
+  font-size: 18px;
+}
+
+.indicator-icon.success {
+  color: #10b981;
+}
+
+.indicator-icon.info {
+  color: #667eea;
+}
+
+.indicator-icon.warning {
+  color: #f59e0b;
+}
+
+.indicator-status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.status-badge.healthy {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.status-badge.normal {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.status-badge.warning {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.status-text {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .performance-charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .performance-metrics-section {
+    padding: 20px;
+  }
+  
+  .performance-cards-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .performance-indicators {
+    grid-template-columns: 1fr;
+  }
+}

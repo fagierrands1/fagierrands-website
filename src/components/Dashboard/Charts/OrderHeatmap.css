@@ -1,0 +1,202 @@
+.order-heatmap {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.heatmap-container {
+  flex: 1;
+}
+
+.hour-labels {
+  display: grid;
+  grid-template-columns: 60px repeat(6, 1fr);
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.label-spacer {
+  /* Empty space above day labels */
+}
+
+.hour-label {
+  font-size: 12px;
+  color: #718096;
+  text-align: center;
+  font-weight: 500;
+}
+
+.heatmap-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.heatmap-row {
+  display: grid;
+  grid-template-columns: 60px repeat(6, 1fr);
+  gap: 2px;
+  align-items: center;
+}
+
+.day-label {
+  font-size: 12px;
+  color: #1a202c;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.heatmap-cell {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  min-height: 32px;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cell-orders {
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Heat intensity colors */
+.heat-very-low {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.heat-very-low .cell-orders {
+  color: #6b7280;
+  text-shadow: none;
+}
+
+.heat-low {
+  background-color: #dbeafe;
+}
+
+.heat-low .cell-orders {
+  color: #1e40af;
+  text-shadow: none;
+}
+
+.heat-medium {
+  background-color: #3b82f6;
+}
+
+.heat-high {
+  background-color: #1d4ed8;
+}
+
+.heat-very-high {
+  background-color: #1e3a8a;
+}
+
+.heatmap-legend {
+  flex-shrink: 0;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 200px;
+}
+
+.legend-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 15px 0;
+}
+
+.legend-scale {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.scale-label {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 500;
+}
+
+.scale-colors {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+}
+
+.scale-color {
+  height: 12px;
+  flex: 1;
+  border-radius: 2px;
+}
+
+.legend-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 12px;
+  color: #1a202c;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-heatmap {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .heatmap-row {
+    grid-template-columns: 50px repeat(6, 1fr);
+  }
+  
+  .hour-labels {
+    grid-template-columns: 50px repeat(6, 1fr);
+  }
+  
+  .day-label {
+    font-size: 10px;
+  }
+  
+  .hour-label {
+    font-size: 10px;
+  }
+  
+  .heatmap-cell {
+    min-height: 28px;
+  }
+  
+  .cell-orders {
+    font-size: 9px;
+  }
+}

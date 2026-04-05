@@ -1,0 +1,196 @@
+.enhanced-dashboard-overview {
+  padding: 1rem;
+}
+
+/* Animation for live indicators */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Card hover effects */
+.enhanced-dashboard-overview .bg-white {
+  transition: all 0.3s ease;
+}
+
+.enhanced-dashboard-overview .bg-white:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Activity list scrollbar */
+.enhanced-dashboard-overview .max-h-64 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.enhanced-dashboard-overview .max-h-64::-webkit-scrollbar {
+  width: 4px;
+}
+
+.enhanced-dashboard-overview .max-h-64::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.enhanced-dashboard-overview .max-h-64::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 2px;
+}
+
+/* Activity item hover effect */
+.enhanced-dashboard-overview .hover\\:bg-gray-50:hover {
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
+}
+
+/* Notification animations */
+.enhanced-dashboard-overview .notification-item {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Status indicators */
+.enhanced-dashboard-overview .status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Button hover effects */
+.enhanced-dashboard-overview button {
+  transition: all 0.2s ease;
+}
+
+.enhanced-dashboard-overview button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.enhanced-dashboard-overview button:active {
+  transform: translateY(0);
+}
+
+/* Grid responsive adjustments */
+@media (max-width: 1024px) {
+  .enhanced-dashboard-overview .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .enhanced-dashboard-overview {
+    padding: 0.5rem;
+  }
+  
+  .enhanced-dashboard-overview .flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .enhanced-dashboard-overview .space-x-2 > * + * {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Loading states */
+.enhanced-dashboard-overview .loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .enhanced-dashboard-overview .bg-white {
+    background-color: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    color: #f9fafb;
+  }
+  
+  .enhanced-dashboard-overview .text-gray-900 {
+    color: #f9fafb;
+  }
+  
+  .enhanced-dashboard-overview .text-gray-600 {
+    color: #d1d5db;
+  }
+  
+  .enhanced-dashboard-overview .text-gray-500 {
+    color: #9ca3af;
+  }
+  
+  .enhanced-dashboard-overview .hover\\:bg-gray-50:hover {
+    background-color: rgba(55, 65, 81, 0.5);
+  }
+}
+
+/* Accessibility improvements */
+.enhanced-dashboard-overview .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles */
+.enhanced-dashboard-overview button:focus,
+.enhanced-dashboard-overview .bg-white:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .enhanced-dashboard-overview .bg-white {
+    border: 2px solid #000;
+  }
+  
+  .enhanced-dashboard-overview .text-gray-500 {
+    color: #000;
+  }
+}
+
+/* Performance optimizations */
+.enhanced-dashboard-overview * {
+  will-change: auto;
+}
+
+.enhanced-dashboard-overview .bg-white {
+  contain: layout style paint;
+}

@@ -1,0 +1,234 @@
+/* VerificationForm.css */
+
+.verification-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Add the gradient background like in the signup form */
+.bg-gradient {
+  background: #49AFAF;
+  background: radial-gradient(at center, #49AFAF, #A8DFF4);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verification-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+}
+
+.verification-card .card-header {
+  background-color:rgb(141, 162, 247);
+  color: white;
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+.verification-card .card-body {
+  padding: 25px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solidrgb(180, 211, 243);
+}
+
+.form-section h5 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-input {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+}
+
+.document-upload-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.document-upload {
+  flex: 1;
+  min-width: 200px;
+}
+
+.upload-preview {
+  height: 180px;
+  background-color:rgb(154, 199, 245);
+  border: 1px dashed #ced4da;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* Modern upload preview style matching the signup form */
+.upload-preview-modern {
+  border: 2px dashed #ced4da;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-preview-modern:hover {
+  border-color: #4a6cf7;
+  background-color: #f8f9fa;
+}
+
+.upload-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #adb5bd;
+}
+
+.upload-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.upload-placeholder p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Hide the default file input */
+.file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.privacy-notice {
+  background-color: #f0f7ff;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #4a6cf7;
+}
+
+.privacy-notice h6 {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.privacy-notice p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Make submit button match the signup form */
+.submit-button {
+  padding: 12px 16px;
+  border-radius: 6px;
+  background-color: #4a6cf7;
+  border-color: #4a6cf7;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #3a5be6;
+  border-color: #3a5be6;
+}
+
+/* Verification Status Styles */
+.verification-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.verification-status-card {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.status-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.status-pending .status-icon {
+  color: #ffc107;
+}
+
+.status-verified .status-icon {
+  color: #28a745;
+}
+
+.status-rejected .status-icon {
+  color: #dc3545;
+}
+
+.verification-btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-verified {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-pending {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.btn-verify {
+  background-color: #4a6cf7;
+  border-color: #4a6cf7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .document-upload-container {
+    flex-direction: column;
+  }
+  
+  .document-upload {
+    width: 100%;
+  }
+}

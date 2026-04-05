@@ -2,7 +2,7 @@ services:
   - type: web
     name: fagierrands-website
     env: static
-    buildCommand: npm install --legacy-peer-deps && npm run build
+    buildCommand: bash build.sh
     staticPublishPath: ./build
     envVars:
       - key: NODE_VERSION

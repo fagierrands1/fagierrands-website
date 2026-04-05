@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: fagierrands-website
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: NODE_VERSION
+        value: 18.18.0
+      - key: REACT_APP_SUPABASE_URL
+        sync: false
+      - key: REACT_APP_SUPABASE_ANON_KEY
+        sync: false
+      - key: REACT_APP_VAPID_PUBLIC_KEY
+        sync: false
+      - key: REACT_APP_MAPBOX_TOKEN
+        sync: false
+      - key: REACT_APP_MAPBOX_SECRET_TOKEN
+        sync: false
+      - key: REACT_APP_API_BASE_URL
+        sync: false

@@ -21,12 +21,12 @@ export const getApiBaseUrl = () => {
   
   // Check if we're in a local environment
   if (isLocalEnvironment()) {
-    return 'https://errandserver.fagitone.com/api';
+    return 'https://fagierrands-backend-xwqi.onrender.com/api';
   }
   
   // Use the actual API server URL for production
   // Note: If the primary server is down, the retry logic in axiosConfig will handle it
-  return 'https://errandserver.fagitone.com/api';
+  return 'https://fagierrands-backend-xwqi.onrender.com/api';
 };
 
 /**
@@ -35,7 +35,7 @@ export const getApiBaseUrl = () => {
  */
 export const getFallbackApiUrls = () => {
   return [
-    'https://fagierrands-server.onrender.com/api',
+    'https://fagierrands-backend-xwqi.onrender.com/api',
     // Add more fallback URLs here if you have multiple deployments
   ];
 };
@@ -47,11 +47,11 @@ export const getFallbackApiUrls = () => {
 export const getApiServerUrl = () => {
   // Check if we're in a local environment
   if (isLocalEnvironment()) {
-    return 'https://errandserver.fagitone.com';
+    return 'https://fagierrands-backend-xwqi.onrender.com';
   }
   
   // Use the actual API server URL for production
-  return 'https://errandserver.fagitone.com';
+  return 'https://fagierrands-backend-xwqi.onrender.com';
 };
 
 /**
@@ -66,7 +66,7 @@ export const getFrontendUrl = () => {
   
   return isLocalEnvironment()
     ? 'http://localhost:3000'
-    : 'https://fagierrand.fagitone.com';
+    : 'https://fagierrands-website.onrender.com';
 };
 
 /**

@@ -30,7 +30,7 @@ export const WebSocketProvider = ({ children }) => {
     
     try {
       // Create WebSocket connection
-      const ws = new WebSocket(`wss://errandserver.fagitone.com/ws/locations/order/${orderId}/?token=${token}`);
+      const ws = new WebSocket(`wss://fagierrands-backend-xwqi.onrender.com/ws/locations/order/${orderId}/?token=${token}`);
       socketRef.current = ws; // Store in ref for cleanup
       
       ws.onopen = () => {

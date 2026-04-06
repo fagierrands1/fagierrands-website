@@ -22,5 +22,10 @@ echo "=========================================="
 npm run build --verbose
 
 echo "=========================================="
+echo "Copying _redirects file..."
+echo "=========================================="
+cp public/_redirects build/_redirects
+
+echo "=========================================="
 echo "Build completed successfully!"
 echo "=========================================="

@@ -54,10 +54,8 @@ const Login = () => {
       const result = await login(email, password);
       
       if (result.success) {
-        // Force a page reload to ensure the AuthContext is re-initialized with fresh data
-        setTimeout(() => {
-          window.location.href = '/dashboard';
-        }, 100);
+        // Navigate to dashboard using React Router
+        navigate('/dashboard', { replace: true });
       } else {
         setError(result.message || 'Login failed. Please check your credentials.');
       }
